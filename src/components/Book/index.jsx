@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Book = () => {
+const Book = ({ data }) => {
+	const { title  } = data;
 
-  return <p>book</p>
+  return <p>{title}</p>
 };
 
 export default Book;

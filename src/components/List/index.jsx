@@ -20,7 +20,11 @@ console.log(list);
     <div className="RandomMeal">
       <p>List</p>
       <button onClick={fetchList}>Charger la liste</button>
-      <Book />
+      <div>
+        {list.map((book) => (
+          <Book data={book} key={book.id} />
+          ))}
+      </div>
     </div>
   );
 };
