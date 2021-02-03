@@ -19,7 +19,7 @@ const List = () => {
   }, []);
 
   return (
-    <div className="books">
+    <div className="display-cards">
       {list && (list.map((book) => (
         <Book data={book} key={book.id} />
         ))
