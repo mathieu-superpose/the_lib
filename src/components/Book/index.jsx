@@ -1,7 +1,8 @@
 import React from 'react';
 import './book.scss';
+import Favorite from 'components/Favorite';
 
-const Book = ({ data }) => {
+const Book = ({ data, onFav, isFav }) => {
 	const { title, thumbnailUrl, shortDescription } = data;
 
   return <div className="card">
@@ -12,7 +13,8 @@ const Book = ({ data }) => {
       <h3 className="card__body__title">{title}</h3>
       <p className="card__body__description">{shortDescription}</p>
     </div>
-
+    {!isFav && <Favorite onClick={onFav}/>}
+    {isFav && "LIKE"}
   </div>
 };
 
